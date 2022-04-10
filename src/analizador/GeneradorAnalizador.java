@@ -11,7 +11,7 @@ public class GeneradorAnalizador {
 
     private static void generarCompilador(){
         try {
-            String ruta = "/Volumes/GoogleDrive-104432374444145974581/Mi unidad/Universidad/2022-01/Compiladores/JFlex Compiladores/analizador/"; //ruta donde tenemos los archivos con extension .jflex y .cup
+            String ruta = "src/analizador/"; //ruta donde tenemos los archivos con extension .jflex y .cup
             String opcFlex[] = { ruta + "lexico.jflex", "-d", ruta };
             jflex.Main.generate(opcFlex);
             String opcCUP[] = { "-destdir", ruta, "-parser", "parser", ruta + "sintactico.cup" };
